@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <h1>HTML Forms</h1>
+    <form>
+        <fieldset>
+            <legend>Personal Info</legend>
+            <div>
+                <label for="fullname">Fullname:</label>
+                <input type="text" id="fullname">
+            </div>
+            <div>
+                <label for="gender">Gender:</label>
+                <input type="radio" id="gender" value="male">male
+                <input type="radio" id="gender" value="female">female
+            </div>
+            <div>
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday">
+            </div>
+            <div>
+                <label for="city">City:</label>
+                <select id="city">
+                    <option value="">Select</option>
+                    <optgroup label="Marmara ">
+                        <option value="İstanbul">İstanbul</option>
+                        <option value="İstanbul">Tekirdağ</option>
+                        <option value="İstanbul">Kırklareli</option>
+                    </optgroup>
+                    <optgroup label="İç Anadolu">
+                        <option value="Ankara">Ankara</option>
+                        <option value="Kırşehir">Kırşehir</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div>
+                <label>Hobbies:</label>
+                <input type="checkbox" name="hobbies[]">Karate
+                <input type="checkbox" name="hobbies[]">Gaming
+                <input type="checkbox" name="hobbies[]">Polo
+                <input type="checkbox" name="hobbies[]">Ski
+            </div>
+            <div>
+                <label for="cv">CV:</label>
+                <input type="file" id="cv">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Contact Info</legend>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+            </div>
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone">
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <textarea id="address"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend></legend>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password">
+            </div>
+            <div>
+                <button type="submit">submit</button>
+                <button type="reset">reset</button>
+            </div>
+        </fieldset>
+    </form>
+    <h2>Input Types</h2>
+    <h3>Color Picker</h3>
+    <label for="color">Pick a color:</label>
+    <input type="color" name="color" id="color">
+    <h3>Stepper</h3>
+    <label for="number">Increase/decrease to select a number:</label>
+    <input type="number" name="number" id="number" min="1" max="5">
+</body>
+</html>
