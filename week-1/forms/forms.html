@@ -4,26 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Forms</title>
+    <style>
+
+        .field:nth-of-type(2n+1) {
+            background-color: whitesmoke;
+        }
+
+        input#phone, input#email, input#password {
+            margin: 0;
+            margin-bottom: 3px;
+            margin-top: 3px;
+        }
+
+        textarea {
+            border-color: black;
+        }
+        
+    </style>
 </head>
 <body>
     <h1>HTML Forms</h1>
-    <form>
+    <form id="info-form">
         <fieldset>
             <legend>Personal Info</legend>
-            <div>
+            <div class="field">
                 <label for="fullname">Fullname:</label>
                 <input type="text" id="fullname">
             </div>
-            <div>
+            <div class="field">
                 <label for="gender">Gender:</label>
-                <input type="radio" id="gender" value="male">male
-                <input type="radio" id="gender" value="female">female
+                <input type="radio" id="male" value="male">male
+                <input type="radio" id="female" value="female">female
             </div>
-            <div>
+            <div class="field">
                 <label for="birthday">Birthday:</label>
                 <input type="date" id="birthday">
             </div>
-            <div>
+            <!-- city dropdown -->
+            <div class="field">
                 <label for="city">City:</label>
                 <select id="city">
                     <option value="">Select</option>
@@ -38,7 +56,34 @@
                     </optgroup>
                 </select>
             </div>
-            <div>
+            <div class="field">
+                <label for="cv">CV:</label>
+                <input type="file" id="cv">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Favorites</legend>
+            <div class="field">
+                <label for="hobbies">Hobbies:</label>
+                <div>
+                    <input type="checkbox" id="karate" name="hobbies" value="karate">
+                    <label for="karate">karate</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="gaming" name="hobbies" value="gaming">
+                    <label for="gaming">gaming</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="polo" name="hobbies" value="polo">
+                    <label for="polo">polo</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="ski" name="hobbies" value="ski">
+                    <label for="ski">ski</label>
+                </div>
+            </div>
+            <!-- fruit dropdown -->
+            <div class="field">
                 <label for="fruit">Favorite Fruit:</label>
                 <select id="fruit">
                     <option value="">Fruits</option>
@@ -47,40 +92,29 @@
                     <option value="strawberry">strawberry</option>
                 </select>
             </div>
-            <div>
-                <label>Hobbies:</label>
-                <input type="checkbox" name="hobbies[]">Karate
-                <input type="checkbox" name="hobbies[]">Gaming
-                <input type="checkbox" name="hobbies[]">Polo
-                <input type="checkbox" name="hobbies[]">Ski
-            </div>
-            <div>
-                <label for="color">Pick your favorite color:</label>
+            <div class="field">
+                <label for="color">Color:</label>
                 <input type="color" name="color" id="color">
-            </div>
-            <div>
-                <label for="cv">CV:</label>
-                <input type="file" id="cv">
             </div>
         </fieldset>
         <fieldset>
             <legend>Contact Info</legend>
-            <div>
+            <div class="field">
                 <label for="email">Email:</label>
                 <input type="email" id="email">
             </div>
-            <div>
+            <div class="field">
                 <label for="phone">Phone:</label>
                 <input type="tel" id="phone">
             </div>
-            <div>
+            <div class="field">
                 <label for="address">Address:</label>
                 <textarea id="address"></textarea>
             </div>
         </fieldset>
         <fieldset>
             <legend></legend>
-            <div>
+            <div class="field">
                 <label for="password">Password:</label>
                 <input type="password" id="password">
             </div>
