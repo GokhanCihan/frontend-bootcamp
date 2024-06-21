@@ -7,26 +7,8 @@
 </head>
 <style>
 
-    section {
-        margin: 3%;
-        padding: 1%;
-        background-color: rgb(220, 232, 228);
-        border-radius: 2%;
-    }
-
-    .about-me {
-        display: flex;
-        gap: 5%;
-    }
-
-    nav {
-        margin-left: auto;
-        justify-content: space-between;
-    }
- 
-    .logo {
-        width: 75;
-        height: 75;
+    body {
+        background-color: rgba(180, 48, 64, 0.3);
     }
 
     h1 {
@@ -38,27 +20,70 @@
         margin-block-start: 0em;
     }
 
-    h3, p {
+    h3, p, li {
         font-size: small;
+    }
+
+    header {
+        display: flex;
+        margin-left: 0;
+        margin-right: 0;
+        position: fixed;
+        padding: 0% 1% 0% 1%;
+        width: 95%;
+        height: 60px;
+        top: 0;
+        background-color: rgb(220, 232, 228);
+    }
+
+    section {
+        margin: 0;
+        margin: 3% 3% 3% 3%;
+        padding: 3%;
+        background-color: rgb(220, 232, 228);
+        border-radius: 3%;
+    }
+
+    section:first-of-type {
+        margin-top: 70px;
+    }
+
+    .about-me {
+        display: flex;
+        gap: 5%;
+    }
+
+    nav {
+        display: flex;
+        margin-left: auto;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 150px;;
+        gap: 5px;
+    }
+
+    .nav-item {
+        display: flex;
+        align-self: center;
+        width: 30px;
+        height: 30px;
     }
 
 </style>
 
 <body>
-
     <!-- About Me -->
-    <section>
-        <div class="about-me">
-            <div>
-                <h1>Gökhan Cihan</h1>
-            </div>
-            <nav>
-                <a class="logo"><img src="/" alt="linkedin"></a>
-                <a class="logo"><img src="/" alt="github"></a>
-                <a class="logo"><img class="logo" src="/" alt="discord"></a>
-                <a class="logo"><img class="logo" src="/" alt="insta"></a>
-            </nav>
+    <header>
+        <div>
+            <h1>Gökhan Cihan</h1>
         </div>
+        <nav>
+            <a class="nav-item" href="https://www.linkedin.com/in/gokhan-cihan/"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="linkedin"></a>
+            <a class="nav-item" href="https://github.com/GokhanCihan"><img src="https://img.icons8.com/color/48/000000/github.png" alt="github"></a>
+            <a class="nav-item" href="https://discordapp.com/users/317307521226375168/"><img src="https://img.icons8.com/color/48/000000/discord-logo.png" alt="discord"></a>
+        </nav>
+    </header>
+    <section>
         <div class="about-me">
             <div>
                 <img src="/my-photo" alt="my photo" width="150" height="175">
@@ -66,8 +91,8 @@
             <div>
                 <h2>About Me</h2>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis eos quas minima nostrum harum deserunt 
-                    laudantium. Placeat ipsa vitae ex itaque laudantium ea, soluta minima possimus blanditiis quasi saepe id!
+                    I am a chemical engineer and highly motivated software development enthusiast with a keen interest in web 
+                    development and backend technologies.
                 </p>
             </div>
         </div>
@@ -76,53 +101,42 @@
     <!-- Experience -->
     <section>
         <h2>Experience</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur est optio officiis. Quibusdam incidunt 
-            praesentium dignissimos, vel ab voluptate? Id, rerum. Magni labore nobis optio nostrum commodi delectus corrupti.
-        </p>
         <ol>
-            <li>Vel ab voluptate</li>
-            <li>Soluta minima possimus</li>
-            <li>Nobis optio nostrum</li>
+            <li>Process engineer</li>
+            <li>Summer internships</li>
         </ol>
     </section>
 
     <!--Education -->
     <section>
         <h2>Education</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat a architecto reprehenderit dolor quidem 
-            repellendus dolorum ab perspiciatis facilis hic, sint suscipit laborum eaque, modi dicta voluptate debitis 
-            neque molestiae.
+        <p>I have a bachelor's degree in chemical engineering from İzmir Yüksek Teknoloji Enstitüsü. I am learning 
+            about web development currently at Patika Fullstack Development Bootcamp, also learned a lot from 
+            <a href="https://www.freecodecamp.org">freecodecamp</a> and 
+            <a href="https://www.kodluyoruz.org/online-icerikler">kodluyoruz</a> in the past.
         </p>
     </section>
 
     <!-- Projects -->
     <section>
         <h2>Projects</h2>
-        <h3>Vet-Rest-API</h3>
+        <h3><a href="https://github.com/GokhanCihan/vet-REST-API">Vet-Rest-API</a></h3>
         <p>
-            Doloremque odio dolorum eum aperiam sunt illum modi sapiente eveniet fugit nam porro, architecto fuga 
-            consectetur veniam vel itaque aspernatur. Vero, atque.
+            I created this project using Java, Spring Boot and PostgreSQL.
         </p>
-        <a src="" See my app here>
+        <h3>
     </section>
 
     <!-- Skills -->
     <section>
         <h2>Skills</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ducimus, impedit aperiam nam perferendis voluptatibus 
-            reprehenderit doloribus corrupti nulla nisi molestiae quo ea dignissimos, quidem consectetur quae quasi corporis. Expedita?
-        </p>
         <ul>
-            <li>Dolorum ab perspiciatis</li>
-            <li>Amet consectetur adipisicing elit</li>
-            <li>Repellendus dolorum</li>
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>Javascript</li>
+            <li>React</li>
+            <li>HTML, CSS</li>
         </ul>
     </section>
 </body>
-
-    <!-- Social Profiles and map -->
-
 </html>
