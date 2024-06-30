@@ -1,0 +1,18 @@
+.body {
+    background-color: #f4f4f4
+}
+
+.navbar, footer {
+    background-color: #333;
+}
+
+.navbar-brand, .nav-link, li, h4 {
+    font-family: Arial, sans-serif;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    color: #666;
+}
