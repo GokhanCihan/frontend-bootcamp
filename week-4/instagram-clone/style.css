@@ -1,0 +1,13 @@
+    .ppcircle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 3px solid rgb(238, 39, 82);
+    }
+
+    .ppcircle.small {
+        width: 24px;
+        height: 24px;
+        border: none;
+        vertical-align:middle ;
+    }
