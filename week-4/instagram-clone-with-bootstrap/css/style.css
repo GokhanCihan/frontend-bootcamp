@@ -1,11 +1,44 @@
+body{
+  margin: 0;
+  padding-top: 54px;
+  background-color: #F4F4F4;
+}
+
+.navbar {
+  height: 54px;
+  background-color: white;
+}
+
+.logo {
+  padding-left: 192px;
+}
+
+.middlearea {
+  max-height: 200px !important;
+}
+
+.card-header, .card-footer {
+  background-color: white;
+}
+
+.rightpanel {
+  background-color: white;
+}
+
 ::placeholder{
   text-align: center;
   font-size: 14px;
   color: gray;
   background-position: 40%;
   background-size: 6%;
+  background-image: url('../assets/search-solid.svg');
+  background-repeat: no-repeat;
+  text-indent: 20px;
 }
 
+.list-group {
+  border: none;
+}
 input.empty {
     font-family: FontAwesome;
     font-style: normal;
