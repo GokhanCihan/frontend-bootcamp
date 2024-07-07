@@ -2,10 +2,28 @@
     --stellar-gold: rgb(185, 140, 91);
     --supernova-blue: rgb(61, 75, 89);
   }
-  
-body {
+
+body, a {
     background-color: var(--supernova-blue);
     color: var(--stellar-gold);
+}
+
+ul > li {
+	margin: 0;
+	padding: 36px 0 36px 30px;
+	list-style: none;
+	background-image: url('assets/spaceship_and_sun_emblem.svg');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 24px;
+}
+
+a {
+    margin-top: 5%;
+}
+
+h1, h2 {
+    color: silver;
 }
 
 article {
@@ -13,6 +31,7 @@ article {
     border-radius: 10%;
     margin: auto;
     width: 80%;
+    padding: 5%;
 }
 
 .flex {
@@ -31,9 +50,19 @@ article {
     margin-bottom: 5%;
 }
 
-img.img-throne {
+li {
+    text-align: left;
+    line-height: 1.5;
+}
+
+.img-throne {
     height: 400px; 
     width: 300px;
+}
+
+.img-sun {
+    height: 36px;
+    width: 36px;
 }
 
 .dancing-script {
@@ -43,3 +72,10 @@ img.img-throne {
     font-style: normal;
     font-size: x-large;
 }
+
+.wittgenstein {
+    font-family: "Wittgenstein", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: small;
+  }
