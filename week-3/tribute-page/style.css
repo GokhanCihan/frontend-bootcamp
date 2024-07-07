@@ -1,7 +1,23 @@
 :root {
     --stellar-gold: rgb(185, 140, 91);
     --supernova-blue: rgb(61, 75, 89);
-  }
+}
+
+
+.dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+}
+
+.wittgenstein {
+    font-family: "Wittgenstein", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: small;
+}
 
 body, a {
     background-color: var(--supernova-blue);
@@ -65,17 +81,16 @@ li {
     width: 36px;
 }
 
-.dancing-script {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: x-large;
+footer {
+    background-color: #C0C0C0;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.wittgenstein {
-    font-family: "Wittgenstein", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: small;
-  }
+footer p {
+    margin: 0;
+}
