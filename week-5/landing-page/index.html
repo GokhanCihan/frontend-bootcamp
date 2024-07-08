@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>landing page</title>
 </head>
-<body>
-    <nav>
+<body class="bg-gray-100 pt-4 pb-4 pl-8 pr-8">
+
+    <nav class="bg-gray-50 mb-4 grid grid-cols-2 p-2 items-center">
         <div>
-            <img src="https://picsum.photos/id/18/32" alt="">
+            <img src="https://picsum.photos/id/18/32" alt="random photo">
         </div>
-        <div>
+        <div class="grid grid-cols-4 justify-self-end text-sm items-center">
             <a href="">Link</a>
             <a href="">Link</a>
             <a href="">Link</a>
-            <button>Sign Up</button>
+            <button class="bg-violet-600 rounded p-1 text-white text-sm">Sign Up</button>
         </div>
     </nav>
 
-    <section>
-        <div>
-            <h4>Mamba design system</h4>
-            <h2>Built it with Mamba</h2>
-            <p>Modular and versatile. The ultimate design toolkit for savvy technology startups.</p>
-            <form action="">
-                <input type="text" placeholder="Your name">
-                <input type="email" placeholder="Email address">
-                <button>Join the waitlist</button>
+    <section class="mb-4 grid grid-cols-2" id="section01">
+        <div class="bg-gray-50 flex flex-col justify-self-start justify-center items-center text-center">
+            <h4 class="text-sm text-violet-600">Mamba design system</h4>
+            <h2 class="text-3xl font-extrabold">Built it with Mamba</h2>
+            <p><span class="text-sm font-bold">Modular and versatile.</span>The ultimate design toolkit for savvy technology startups.</p>
+            <form class="flex flex-col mt-4" action="">
+                <input class="mt-2" type="text" placeholder="Your name">
+                <input class="mt-2" type="email" placeholder="Email address">
+                <button class="bg-violet-600 rounded p-1 text-white text-sm mt-2 p-2">Join the waitlist</button>
             </form>
         </div>
-        <div>
+        <div class="justify-self-end">
             <img src="https://picsum.photos/id/958/600" alt="random photo">
         </div>
     </section>
+
     <section>
         <h4>HOW IT WORKS</h4>
         <h2>Building with Mamba is simple</h2>
