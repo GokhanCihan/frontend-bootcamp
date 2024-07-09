@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>landing page</title>
 </head>
-<body class="bg-gray-100 pt-4 pb-4 pl-12 pr-12">
+<body class="bg-gray-100 pt-4 pb-1 pl-12 pr-12">
 
     <nav class="bg-gray-50 mb-4 grid grid-cols-2 p-2 items-center">
         <div>
@@ -47,17 +47,17 @@
                 <div>
                     <span class="bg-violet-600 rounded-full text-white text-sm p-1 pl-2 pr-2">1</span>
                 </div>
-                <p class="text-sm m-1">Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
+                <p class="text-sm font-medium mt-2"><span class="font-bold">Lorem</span> ipsum dolor sit amet consectetur adipisicing elit?</p>
             </div>
             <div class="bg-gray-50 p-4">
                 <div>
                     <span class="bg-violet-600 rounded-full text-white text-sm p-1 pl-2 pr-2">2</span>
                 </div>
-                <p class="text-sm m-1">Laudantium, ex perspiciatis in expedita illo nisi aut?</p>
+                <p class="text-sm font-medium mt-2"><span class="font-bold">Laudantium,</span> ex perspiciatis in expedita illo nisi aut?</p>
             </div>
             <div class="bg-gray-50 p-4">
                 <div><span class="bg-violet-600 rounded-full text-white text-sm p-1 pl-2 pr-2">3</span></div>
-                <p class="text-sm m-1">Mollitia commodi non nisi perferendis repellat deleniti assumenda a, fuga eligendi!</p>
+                <p class="text-sm font-medium mt-2"><span class="font-bold">Mollitia</span> commodi non nisi perferendis repellat deleniti assumenda a, fuga eligendi!</p>
             </div>
         </div>
     </section>
@@ -102,32 +102,34 @@
         </div>
     </section>
 
-    <section>
-        <div>
-            <p>Panel-based blocks. Flexible panels that are perfext for building functional layouts.</p>
+    <section class="grid grid-cols-3 gap-4 mt-8 text-xs mt-8 mb-4" id="section05">
+        <div class="bg-gray-50 pl-4 pr-4 pt-8 pb-8">
+            <p><span class="font-semibold">Panel-based blocks.</span> Flexible panels that are perfext for building functional layouts.</p>
         </div>
-        <div>
-            <p>Responsive design. Panels look great no matter the device.</p>
+        <div class="bg-gray-50 pl-4 pr-4 pt-8 pb-8">
+            <p><span class="font-semibold">Responsive design.</span> Panels look great no matter the device.</p>
         </div>
-        <div>
-            <p>Premium support. Join over 50,000 satisfied customers who use our templates.</p>
-        </div>
-    </section>
-
-    <section>
-        <div>
-            <h2>Our team is here to help you.</h2>
-            <a href="">Meet our crew ></a>
-        </div>
-        <div>
-            <img src="https://picsum.photos/id/622/900/350" alt="random photo">
+        <div class="bg-gray-50 pl-4 pr-4 pt-8 pb-8">
+            <p><span class="font-semibold">Premium support.</span> Join over 50,000 satisfied customers who use our templates.</p>
         </div>
     </section>
 
-    <footer>
-        <span>Mamba</span>
-        <div>
+    <section class="bg-gray-50 flex flex-col text-center mt-8 mb-4 pb-8" id="section06">
+        <div class="pt-8 pb-5">
+            <h2 class="text-2xl font-extrabold">Our team is here to help you.</h2>
+            <a class="text-xs font-light" href="">Meet our crew ></a>
+        </div>
+        <div class="flex justify-center object-fill">
+            <img src="https://picsum.photos/id/622/1200/300" alt="random photo">
+        </div>
+    </section>
 
+    <footer class="bg-gray-50 grid grid-cols-2 mt-8 p-3">
+        <span class="text-xs font-semibold">Mamba</span>
+        <div class="grid grid-cols-3 gap-2 justify-self-end">
+            <a href=""><img src="https://img.icons8.com/color/24/000000/linkedin.png" alt="linkedin"></a>
+            <a href=""><img src="https://img.icons8.com/color/24/000000/github.png" alt="github"></a>
+            <a href=""><img src="https://img.icons8.com/color/24/000000/discord-logo.png" alt="discord"</a>
         </div>
     </footer>
 
