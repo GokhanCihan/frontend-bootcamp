@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">    
     <!-- tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
     <title>review page</title>
 </head>
 <body>
@@ -54,43 +61,72 @@
             <button>Learn more</button>
         </div>
     </section>
-    <section id="section02">
-        <h2>What our customers are saying about us:</h2>
-        <div>
-            <figure>
-                <blockquote>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente necessitatibus, quia ab 
-                    praesentium quibusdam maiores.</blockquote>
-                <img src="https://picsum.photos/id/30/44" alt="">
-                <figcaption>
-                    <p>Distinctio Animi</p>
-                    <p>ALIQUAM ILLUM</p>
+    <!-- section 2 -->
+    <section class="bg-gray-50 pt-8 pb-8" id="section02">
+        <h2 class="text-center text-lg font-semibold">What our customers are saying about us</h2>
+        <div class="grid grid-cols-2 text-xs gap-x-20 gap-y-8 mt-16">
+            <!-- card -->
+            <figure class="relative rounded-lg overflow-hidden shadow-lg w-64 h-100 text-center justify-self-end">
+                <blockquote class="bg-white p-10 text-xs italic">
+                    <span class="text-sm text-black text-violet-600">"</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente necessitatibus, quia ab 
+                    praesentium quibusdam maiores.
+                <span class="text-sm text-black text-violet-600">"</span>
+                </blockquote>
+                <span class="absolute items-center py-2 inset-y-36 inset-x-28">
+                    <img class="rounded-full" src="https://picsum.photos/id/30/44" alt="">
+                </span>
+                <figcaption class="bg-violet-600 text-white px-4 py-4">
+                    <p class="text-sm font-medium">Distinctio Animi</p>
+                    <p class="text-xs font-thin">ALIQUAM ILLUM</p>
                 </figcaption>
             </figure>
-            <figure>
-                <blockquote>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente necessitatibus, quia ab
-                     praesentium quibusdam maiores.</blockquote>
-                <img src="https://picsum.photos/id/60/44" alt="">
-                <figcaption>
-                    <p>Distinctio Animi</p>
-                    <p>ALIQUAM ILLUM</p>
+            <!-- card -->
+            <figure class="relative rounded-lg overflow-hidden shadow-lg w-64 h-100 text-center justify-self-start">
+                <blockquote class="bg-white p-10 text-xs italic">
+                    <span class="text-sm text-black text-violet-600">"</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente necessitatibus, quia ab
+                     praesentium quibusdam maiores.
+                    <span class="text-sm text-black text-violet-600">"</span>
+                    </blockquote>
+                <span class="absolute items-center py-2 inset-y-36 inset-x-28">
+                    <img class="rounded-full" src="https://picsum.photos/id/60/44" alt="">
+                </span>
+                <figcaption class="bg-violet-600 text-white px-4 py-4">
+                    <p class="text-sm font-medium">Distinctio Animi</p>
+                    <p class="text-xs font-thin">ALIQUAM ILLUM</p>
                 </figcaption>
             </figure>
-            <figure>
-                <blockquote>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente necessitatibus, quia ab
-                     praesentium quibusdam maiores.</blockquote>
-                <img src="https://picsum.photos/id/90/44" alt="">
-                <figcaption>
-                    <p>Distinctio Animi</p>
-                    <p>ALIQUAM ILLUM</p>
+            <!-- card -->
+            <figure class="relative rounded-lg overflow-hidden shadow-lg w-64 h-100 text-center justify-self-end">
+                <blockquote class="bg-white p-10 text-xs italic">
+                    <span class="text-sm text-black text-violet-600">"</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente necessitatibus, quia ab
+                     praesentium quibusdam maiores.
+                    <span class="text-sm text-black text-violet-600">"</span>
+                    </blockquote>
+                <span class="absolute items-center py-2 inset-y-36 inset-x-28">
+                    <img class="rounded-full" src="https://picsum.photos/id/90/44" alt="">
+                </span>
+                <figcaption class="bg-violet-600 text-white px-4 py-4">
+                    <p class="text-sm font-medium">Distinctio Animi</p>
+                    <p class="text-xs font-thin">ALIQUAM ILLUM</p>
                 </figcaption>
             </figure>
-            <figure>
-                <blockquote>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente necessitatibus, quia ab
-                     praesentium quibusdam maiores.</blockquote>
-                <img src="https://picsum.photos/id/120/44" alt="">
-                <figcaption>
-                    <p>Distinctio Animi</p>
-                    <p>ALIQUAM ILLUM</p>
+            <!-- card -->
+            <figure class="relative rounded-lg overflow-hidden shadow-lg w-64 h-100 text-center justify-self-start">
+                <blockquote class="bg-white p-10 text-xs italic">
+                    <span class="text-sm text-black text-violet-600">"</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente necessitatibus, quia ab
+                     praesentium quibusdam maiores.
+                    <span class="text-sm text-black text-violet-600">"</span>
+                    </blockquote>
+                <span class="absolute items-center py-2 inset-y-36 inset-x-28">
+                    <img class="rounded-full" src="https://picsum.photos/id/120/44" alt="">
+                </span>
+                <figcaption class="bg-violet-600 text-white px-4 py-4">
+                    <p class="text-sm font-medium">Distinctio Animi</p>
+                    <p class="text-xs font-thin">ALIQUAM ILLUM</p>
                 </figcaption>
             </figure>
         </div>
