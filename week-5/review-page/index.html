@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">    
     <!-- tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
-      crossorigin="anonymous"
-    />
     <title>review page</title>
 </head>
 <body>
@@ -63,7 +56,7 @@
     </section>
     <!-- section 2 -->
     <section class="bg-gray-50 pt-8 pb-8" id="section02">
-        <h2 class="text-center text-lg font-semibold">What our customers are saying about us</h2>
+        <h2 class="text-center text-xl font-bold">What our customers are saying about us</h2>
         <div class="grid grid-cols-2 text-xs gap-x-20 gap-y-8 mt-16">
             <!-- card -->
             <figure class="relative rounded-lg overflow-hidden shadow-lg w-64 h-100 text-center justify-self-end">
@@ -131,17 +124,26 @@
             </figure>
         </div>
     </section>
-    <section id="section03">
-        <form action="" method="post">
-            <h2>Contact us</h2>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your email">
-            <label for="message">Message</label>
-            <input type="text" id="message" name="message" placeholder="Message...">
-            <button type="submit">Send</button>
-        </form>
+    <!-- section 3 -->
+    <section class="bg-gray-300 pt-8 pb-16" id="section03">
+        <div class="flex overflow-hidden items-center justify-center">
+            <form class="bg-white flex flex-col w-2/5 rounded-sm shadow-lg p-4" action="" method="post">
+                <h2 class="text-xl font-bold">Contact us</h2>
+                <div class="flex flex-col mt-4">
+                    <label for="name">Name</label>
+                    <input class="w-100 bg-slate-50 border-2 border-slate-100 mt-1 placeholder:text-xs placeholder:text-slate-400 placeholder:p-2" type="text" id="name" name="name" placeholder="Your name">
+                </div>
+                <div class="flex flex-col mt-4">
+                    <label for="email">Email</label>
+                    <input class="w-100 bg-slate-50 border-2 border-slate-100 mt-1 placeholder:text-xs placeholder:text-slate-400 placeholder:p-2" type="email" id="email" name="email" placeholder="Your email">
+                </div>
+                <div class="flex flex-col mt-4">
+                    <label for="message">Message</label>
+                    <textarea class="block w-100 bg-slate-50 border-2 border-slate-100 mt-1 placeholder:text-xs placeholder:text-slate-400 placeholder:p-2" rows="2" name="message" id="message" placeholder="Message..."></textarea>
+                </div>
+                <button class="w-100 bg-violet-600 rounded-sm text-white text-sm font-medium mt-4 py-2" type="submit">Send</button>
+            </form>
+        </div>
     </section>
     <footer>
         <div>
