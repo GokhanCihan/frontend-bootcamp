@@ -23,13 +23,36 @@
       <div class="text1 text-center">
         Merhaba, <strong><span id="myName"></span></strong>! Hoş geldin!
       </div>
-      <div id="myClock" class="clock" onload="showTime()"></div>
+      <div id="myClock" class="clock"></div>
       <div class="text2 text-center">
         tarihinde
         <strong>Kodluyoruz Frontend Web Development Patikası</strong>'nın
         Javascript bölümü 1. Ödevindesiniz.
       </div>
     </div>
-    <script></script>
+    <script>
+      function showDate() {
+        let date = new Date();
+        const clock = document.getElementById('myClock');
+        const hour = addZero(date.getHours());
+        const min = addZero(date.getMinutes());
+        const sec = addZero(date.getSeconds());
+        const localDate = date.toLocaleDateString();
+        const dateAndTime = `${localDate} - ${hour}:${min}:${sec}`;
+        clock.textContent = dateAndTime;
+      }
+      
+      function addZero(value) {
+        return value >= 10 ? value : '0' + `${value}`; 
+      }
+
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const name = document.getElementById('myName');
+        name.textContent =  prompt('Adınız:');
+        setInterval(() => {
+          showDate();
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
