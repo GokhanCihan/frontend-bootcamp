@@ -33,19 +33,21 @@
     <script>
       function showDate() {
         let date = new Date();
+        const localeDate = date.toLocaleDateString("tr-TR", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          weekday: "long"
+        })
+        const localeTime = date.toLocaleTimeString("tr-TR", {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit"
+        })
         const clock = document.getElementById('myClock');
-        const hour = addZero(date.getHours());
-        const min = addZero(date.getMinutes());
-        const sec = addZero(date.getSeconds());
-        const localDate = date.toLocaleDateString();
-        const dateAndTime = `${localDate} - ${hour}:${min}:${sec}`;
-        clock.textContent = dateAndTime;
+        clock.textContent = `${localeDate} - ${localeTime}`;
       }
       
-      function addZero(value) {
-        return value >= 10 ? value : '0' + `${value}`; 
-      }
-
       document.addEventListener("DOMContentLoaded", (event) => {
         const name = document.getElementById('myName');
         name.textContent =  prompt('Adınız:');
