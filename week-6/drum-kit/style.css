@@ -1,0 +1,37 @@
+main {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+figure {
+    display: block;
+    text-align: center;
+}
+
+img {
+    max-width: 50%;
+}
+
+.key {
+    background-color: tomato;
+    border: 1px solid green;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    transition: all 0.5s;
+}
+
+.playing {
+    transform: scale(1.1);
+    border: 3px solid yellow;
+}
+
+span {
+    display: block;
+    color: brown;
+    font-size: 1em;
+    text-align: center;
+}

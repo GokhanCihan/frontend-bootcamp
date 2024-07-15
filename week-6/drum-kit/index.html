@@ -3,49 +3,52 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/week-6/drum-kit/style.css">
+    <title>Drum Kit</title>
 </head>
 <body>
-    <div>
-        <img src="/week-6/drum-kit/assets/drum.png" alt="">
-    </div>
-    <div>
+    <figure>
+        <img src="/week-6/drum-kit/assets/drum.png" alt="drum">
+    </figure>
+    
+    <main>
         <div>
-            <button data-key="a">A</button>
-            <span class="sound">hihat</span>
+            <div class="key" data-key="a">A</div>
+            <span>hihat</span>
         </div>
         <div>
-            <button data-key="s">S</button>
-            <span class="sound">kick</span>
+            <div class="key" data-key="s">S</div>
+            <span>kick</span>
         </div>
         <div>
-            <button data-key="d">D</button>
-            <span class="sound">clap</span>
+            <div class="key" data-key="d">D</div>
+            <span>clap</span>
         </div>
         <div>
-            <button data-key="f">F</button>
-            <span class="sound">boom</span>
+            <div class="key" data-key="f">F</div>
+            <span>boom</span>
         </div>
         <div>
-            <button data-key="g">G</button>
-            <span class="sound">openhat</span>
+            <div class="key" data-key="g">G</div>
+            <span>openhat</span>
         </div>
         <div>
-            <button data-key="h">H</button>
-            <span class="sound">snare</span>
+            <div class="key" data-key="h">H</div>
+            <span>snare</span>
         </div>
         <div>
-            <button data-key="j">J</button>
-            <span class="sound">ride</span>
+            <div class="key" data-key="j">J</div>
+            <span>ride</span>
         </div>
         <div>
-            <button data-key="k">K</button>
-            <span class="sound">tink</span>
+            <div class="key" data-key="k">K</div>
+            <span>tink</span>
         </div>
         <div>
-            <button data-key="l">L</button>
-            <span class="sound">tom</span>
+            <div class="key" data-key="l">L</div>
+            <span>tom</span>
         </div>
-    </div>
+    </main>
     
     <audio data-key="a" src="/week-6/drum-kit/assets/sounds/hihat.wav"></audio>
     <audio data-key="s" src="/week-6/drum-kit/assets/sounds/kick.wav"></audio>
