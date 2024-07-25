@@ -1,0 +1,38 @@
+body {
+    background-color: #333333;
+}
+
+.card {
+    margin-top: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.content {
+    color: white;
+    margin: 5px;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #5a5a5a;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+button {
+    width: 100px;
+    margin: 0 auto;
+    background-color: #a502a9;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+#joke {
+    text-align: center;
+}
