@@ -3,8 +3,8 @@
     --font-color-2: #868686;
     --background-color-1: #000000;
     --background-color-2: #151515;
-    --border-color-1: #101010;
-    --border-color-2: #101010;
+    --border-color-1: rgba(255, 255, 255, 0.2);
+    --border-color-2: rgba(255, 255, 255, 0.15);;
 }
 
 body {
@@ -21,6 +21,12 @@ p {
 p span {
     color: var(--font-color-1);
     line-height: 1.45;
+}
+
+hr {
+    opacity: 1;
+    margin: 35px 0;
+    border-color: var(--border-color-1);
 }
 
 .section {
