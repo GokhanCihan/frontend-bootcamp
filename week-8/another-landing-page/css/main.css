@@ -2,5 +2,7 @@
 @import './common.css';
 
 @import './layouts/header.css';
-@import './layouts/hero.css';
-@import './layouts/camera.css';
+
+@import './sections/hero.css';
+@import './sections/camera.css';
+@import './sections/products.css'
