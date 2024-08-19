@@ -3,14 +3,23 @@ import './App.css'
 import Player from './Player'
 
 function App() {
+  const [rollStarted, setRollStarted] = useState(false)
+
+  function handleRoll() {
+    setRollStarted(true)
+    setTimeout(() => {
+      setRollStarted(false);
+    }, 2900);
+  }
+
   return (
     <>
       <h1 >DRAW</h1>
       <div className='board'>
-        <Player />
-        <Player />
+        <Player rollStarted={rollStarted} />
+        <Player rollStarted={rollStarted} />
       </div>
-      <button onClick={rollDice}  className='roll-btn'></button>
+      <button onClick={handleRoll} className='roll-btn'>ROLL</button>
     </>
   )
 }

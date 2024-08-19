@@ -7,11 +7,10 @@ import dice5 from '../src/assets/dice5.png'
 import dice6 from '../src/assets/dice6.png'
 
 
-function Dice() {
-  const [dice, setDice] = useState(0)
-  const dices = [dice1, dice2, dice3, dice4, dice5, dice6]
-
-  const roll = () => {
+function Dice({ rollStarted }) {
+  const [dice, setDice] = useState(0);
+  const dices = [dice1, dice2, dice3, dice4, dice5, dice6];
+  if (rollStarted) {
     const roll = setInterval(() => {
       setDice(Math.floor(Math.random() * 5))
     }, 300);
@@ -22,17 +21,18 @@ function Dice() {
 
   return (
     <>
-      <img onClick={roll} src={dices[dice]} alt="dice player X"/>
+      <img src={dices[dice]} alt="dice player X"/>
     </>
   )
 }
 
-function Player() {
+function Player({rollStarted}) {
+
   return (
     <>
       <div className='player'>
         <h2>Player X</h2>
-        <Dice />
+        <Dice rollStarted={rollStarted}/>
       </div>
     </>
   )
