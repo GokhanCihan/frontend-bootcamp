@@ -13,3 +13,18 @@
   justify-content: space-evenly;
   width: 100%;
 }
+
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  margin: 3rem 0;
+}
+
+input{
+  margin: 3.5rem 0;
+  display: block;
+}
