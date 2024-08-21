@@ -1,22 +1,13 @@
 import React, { useState } from 'react'
+import Dice from './Dice.jsx'
 import './App.css'
-import dice1 from '../src/assets/dice1.png'
-import dice2 from '../src/assets/dice2.png'
-import dice3 from '../src/assets/dice3.png'
-import dice4 from '../src/assets/dice4.png'
-import dice5 from '../src/assets/dice5.png'
-import dice6 from '../src/assets/dice6.png'
 
 function App() {
   const [isRolling, setIsRolling] = useState(false);
   const [playerName, setPlayerName] = useState(null);
   const [diceOne, setDiceOne] = useState(0);
   const [diceTwo, setDiceTwo] = useState(0);
-  const [playerScoreOne, setPlayerScoreOne] = useState(null);
-  const [playerScoreTwo, setPlayerScoreTwo] = useState(null);
   const [result, setResult] = useState("Start Game");
-
-  const dices = [dice1, dice2, dice3, dice4, dice5, dice6];
 
   const handleRoll = () => {
     if(playerName) {
@@ -40,8 +31,6 @@ function App() {
         setDiceOne(dice_one);
         setDiceTwo(dice_two);
         if (i === 5) {
-          setPlayerScoreOne(dice_one);
-          setPlayerScoreTwo(dice_two);
           if(dice_one > dice_two) {
             setResult(`${playerName} Wins!`);
           }else if(dice_one < dice_two) {
@@ -60,12 +49,12 @@ function App() {
       <h1>{result}</h1>
       <div className='board'>
         <div className='player'>
-          {playerName ? <h2> {playerName} </h2> : <input type="text" onKeyUp={handleKeyUp} placeholder='type a name then press enter'/> }
-          <img src={dices[diceOne]} alt="dice for player 1" />
+          {playerName ? <h2> {playerName} </h2> : <input type="text" onKeyUp={handleKeyUp} placeholder='type a name then press enter'/>}
+          <Dice dice={diceOne}/>
         </div>
         <div className='player'>
           <h2>Player 2</h2>
-          <img src={dices[diceTwo]} alt="dice for player 2" />
+          <Dice dice={diceTwo}/>
         </div>
       </div>
       <button onClick={handleRoll} className='roll-btn'>ROLL</button>
