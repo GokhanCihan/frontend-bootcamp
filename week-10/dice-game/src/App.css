@@ -58,3 +58,7 @@ button {
   background-color: rgb(25, 193, 131);
   color: white;
 }
+
+button:disabled {
+  background-color: rgb(126, 154, 152)
+}

@@ -3,46 +3,47 @@ import Dice from './Dice.jsx'
 import './App.css'
 
 function App() {
-  const [isRolling, setIsRolling] = useState(false);
+  const [isRolling, setIsRolling] = useState(null);
   const [playerName, setPlayerName] = useState(null);
   const [diceOne, setDiceOne] = useState(0);
   const [diceTwo, setDiceTwo] = useState(0);
   const [result, setResult] = useState("Start Game");
 
   const handleRoll = () => {
-    if(playerName) {
-      setIsRolling(true);
+    if(playerName && !isRolling) {
+      setIsRolling(true)
+      for (let i = 0; i < 6; i++) {
+        setResult("Rolling...");
+        setTimeout(() => {
+          const dice_one = Math.floor(Math.random() * 5);
+          const dice_two = Math.floor(Math.random() * 5);
+          setDiceOne(dice_one);
+          setDiceTwo(dice_two);
+          if (i === 5) {
+            if(dice_one > dice_two) {
+              setResult(`${playerName} Wins!`);
+            }else if(dice_one < dice_two) {
+              setResult("Player 2 Wins!");
+            }else {
+              setResult("DRAW");
+            }
+          }
+        }, i*500);
+      }
+      setTimeout(() => {
+        setIsRolling(false);
+      }, 3100);
     }
   }
 
   const handleKeyUp = (e) => {
     if(e.key === "Enter") {
-      console.log(e.key);
       setPlayerName(e.target.value);
-    }
-  }
-
-  if(isRolling) {
-    for (let i = 0; i < 6; i++) {
-      setResult("Rolling...");
-      setTimeout(() => {
-        const dice_one = Math.floor(Math.random() * 5);
-        const dice_two = Math.floor(Math.random() * 5);
-        setDiceOne(dice_one);
-        setDiceTwo(dice_two);
-        if (i === 5) {
-          if(dice_one > dice_two) {
-            setResult(`${playerName} Wins!`);
-          }else if(dice_one < dice_two) {
-            setResult("Player 2 Wins!");
-          }else {
-            setResult("DRAW");
-          }
-        }
-      }, i*500);
       setIsRolling(false);
     }
   }
+
+  
   
   return (
     <>
@@ -57,7 +58,7 @@ function App() {
           <Dice dice={diceTwo}/>
         </div>
       </div>
-      <button onClick={handleRoll} className='roll-btn'>ROLL</button>
+      <button onClick={handleRoll} className='roll-btn' disabled={isRolling}>ROLL</button>
     </>
   )
 }
