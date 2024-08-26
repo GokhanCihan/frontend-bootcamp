@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import IMAGES from './assets/images/Images'
 import DATA from './data'
+import Info from './components/Info/Info'
 
 function App() {
   const initialWealth = 100_000_000_000;
@@ -94,11 +95,8 @@ function App() {
 
   return (
     <>
-      <div className='info'>
-        <img src={IMAGES.gates} alt="Bill Gates' Portrait" />
-        <h1>Spend Bill Gates' Money</h1>
-      </div>
-      
+      <Info imageUrl={IMAGES.gates}/>
+
       <div className='header'>
         <h1>${wealth}</h1>
       </div>
