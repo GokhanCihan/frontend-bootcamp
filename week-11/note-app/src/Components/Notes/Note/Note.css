@@ -1,0 +1,23 @@
+.note {
+  height: min-content;
+  border-radius: 0.3rem;
+  padding: 0 0.5rem;
+  font-size: 1.3rem;
+  color: #242424;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
