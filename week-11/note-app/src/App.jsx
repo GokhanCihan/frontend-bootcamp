@@ -1,4 +1,5 @@
 import './App.css'
+import NewNote from './Components/NewNote/NewNote';
 import Notes from './Components/Notes/Notes'
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
   return (
     <>
      <h1>NOTES APP</h1>
+     <NewNote />
      <Notes data={DATA} />
     </>
   )
