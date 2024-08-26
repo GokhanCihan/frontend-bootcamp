@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import IMAGES from './assets/images/Images'
 import DATA from './data'
+import { formatNumber } from './helper'
 import Info from './components/Info/Info'
 import Header from './components/Header/Header'
+import Product from './components/Product/Product'
 
 function App() {
   const initialWealth = 100_000_000_000;
@@ -37,22 +39,6 @@ function App() {
       setData(newData);
     }
   }
-
-  // create products
-  const products = data.map((item) => {
-    return (
-      <div key={item.id} className='product'>
-        <img src={item.imageUrl} alt={item.product} />
-        <span className='name'>{item.product}</span>
-        <span className='cost'>${formatNumber(item.cost)}</span>
-        <div className='input-container'>
-          <button className='sell-btn' disabled={item.count<1} onClick={() => handleSell(item.id)}>Sell</button>
-          <input type="text" value={item.count} onChange={(e) => handleChange(e, item.id)} />
-          <button className='buy-btn' disabled={item.cost>wealth} onClick={() => handleBuy(item.id)}>Buy</button>
-        </div>
-      </div>
-    )
-  })
 
   // search for changes in the data
   const receiptItems = data.filter(item => item.count > 0);
@@ -89,18 +75,25 @@ function App() {
     return num.toString();
   }
 
-  // separate thousands
-  function formatNumber(num) {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
-
   return (
     <>
       <Info imageUrl={IMAGES.gates}/>
       <Header wealth={wealth}/>
       
       <div className='product-container'>
-       {products}
+       {data.map((item) => {
+          return (
+            <div key={item.id}>
+              <Product 
+                product={item}
+                wealth={wealth}
+                handleSell={handleSell}
+                handleBuy={handleBuy}
+                handleChange={handleChange}
+              />
+            </div>
+          )
+        })}
       </div>
 
       <div className='receipt-container' hidden={receiptTotal === 0}>
