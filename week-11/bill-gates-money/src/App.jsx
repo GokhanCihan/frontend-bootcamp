@@ -26,6 +26,7 @@ function App() {
     }
   }
 
+  // handle change on input
   const handleChange = (e, id) => {
     const newData = [...data];
     const item = newData.find(item => item.id === id);
@@ -35,6 +36,7 @@ function App() {
     }
   }
 
+  // create products
   const products = data.map((item) => {
     return (
       <div key={item.id} className='product'>
@@ -50,8 +52,10 @@ function App() {
     )
   })
 
+  // search for changes in the data
   const receiptItems = data.filter(item => item.count > 0);
 
+  // create receipt items
   const receipt = receiptItems.map((item) => {
     return (
       <div key={item.id} className="item">
@@ -62,6 +66,7 @@ function App() {
     )
   })
 
+
   const receiptTotal = receiptItems.reduce((total, item) => {
     return total + (item.count * item.cost);
   }, 0)
@@ -69,6 +74,7 @@ function App() {
   useEffect(() => {
     setWealth(initialWealth - receiptTotal)
   }, [data])
+
 
   function formatReceiptNumber(num) {
     if (num >= 1_000_000_000) {
@@ -81,6 +87,7 @@ function App() {
     return num.toString();
   }
 
+  // separate thousands
   function formatNumber(num) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
@@ -90,10 +97,12 @@ function App() {
       <div className='info'>
         <img src={IMAGES.gates} alt="Bill Gates' Portrait" />
         <h1>Spend Bill Gates' Money</h1>
-      </div>   
+      </div>
+      
       <div className='header'>
         <h1>${wealth}</h1>
       </div>
+
       <div className='product-container'>
        {products}
       </div>
