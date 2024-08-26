@@ -3,6 +3,7 @@ import './App.css'
 import IMAGES from './assets/images/Images'
 import DATA from './data'
 import Info from './components/Info/Info'
+import Header from './components/Header/Header'
 
 function App() {
   const initialWealth = 100_000_000_000;
@@ -96,11 +97,8 @@ function App() {
   return (
     <>
       <Info imageUrl={IMAGES.gates}/>
-
-      <div className='header'>
-        <h1>${wealth}</h1>
-      </div>
-
+      <Header wealth={wealth}/>
+      
       <div className='product-container'>
        {products}
       </div>
