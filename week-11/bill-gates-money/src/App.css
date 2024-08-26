@@ -1,0 +1,104 @@
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 0;
+  border: solid 1px gray;
+  background-color: #242424;
+}
+
+.info img {
+  border-radius: 50%;
+}
+
+.header {
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  border: solid 1px gray;
+  background-color: #242424;
+}
+
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 1rem;
+  border: solid gray 1px;
+  background-color: #242424;
+}
+
+.product img {
+  width: 22vw;
+  object-fit: contain;
+}
+
+.product .input-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.product .input-container input {
+  text-align: center;
+}
+
+.sell-btn {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.buy-btn {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+
+.receipt-container {
+  width: 100%;
+  padding: 1rem 0;
+  border: solid gray 1px;
+  background-color: #242424;
+}
+
+.receipt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.receipt h2 {
+  text-align: center;
+}
+
+.receipt .item {
+  display: grid;
+  grid-template-columns: 8rem 2rem 3rem;
+  gap: 3rem;
+}
+
+.receipt .item .name {
+  display: block;
+  min-width: max-content;
+  justify-self: start;
+}
+
+.receipt .item .count {
+  justify-self: start;
+}
+
+.receipt .item .spend {
+  justify-self: end;
+}
+
+.receipt .total {
+  display: flex;
+  gap: 8rem;
+}
