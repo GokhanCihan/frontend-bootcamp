@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
+import { formatNumber, formatReceiptNumber } from './helper'
 import './App.css'
 import IMAGES from './assets/images/Images'
 import DATA from './data'
-import { formatNumber } from './helper'
 import Info from './components/Info/Info'
 import Header from './components/Header/Header'
 import Product from './components/Product/Product'
+import ReceiptItem from './components/ReceiptItem/ReceiptItem'
 
 function App() {
   const initialWealth = 100_000_000_000;
@@ -43,18 +44,6 @@ function App() {
   // search for changes in the data
   const receiptItems = data.filter(item => item.count > 0);
 
-  // create receipt items
-  const receipt = receiptItems.map((item) => {
-    return (
-      <div key={item.id} className="item">
-        <span className='name'>{item.product}</span>
-        <span className='count'>x{item.count}</span>
-        <span className='spend'>${formatReceiptNumber(item.cost * item.count)}</span>
-      </div>
-    )
-  })
-
-
   const receiptTotal = receiptItems.reduce((total, item) => {
     return total + (item.count * item.cost);
   }, 0)
@@ -63,23 +52,10 @@ function App() {
     setWealth(initialWealth - receiptTotal)
   }, [data])
 
-
-  function formatReceiptNumber(num) {
-    if (num >= 1_000_000_000) {
-        return (num / 1_000_000_000).toFixed(1) + 'b';
-    } else if (num >= 1_000_000) {
-        return (num / 1_000_000).toFixed(num % 1_000_000 > 0 ? 1 : 0 ) + 'm';
-    } else if (num >= 1_000) {
-        return (num / 1_000).toFixed(num % 1_000 > 0 ? 1 : 0) + 'k';
-    }
-    return num.toString();
-  }
-
   return (
     <>
       <Info imageUrl={IMAGES.gates}/>
       <Header wealth={wealth}/>
-      
       <div className='product-container'>
        {data.map((item) => {
           return (
@@ -95,18 +71,22 @@ function App() {
           )
         })}
       </div>
-
       <div className='receipt-container' hidden={receiptTotal === 0}>
         <div className='receipt'>
           <h2>Your Receipt</h2>
-          {receipt}
+          {receiptItems.map((item) => {
+            return (
+              <div key={item.id}>
+                <ReceiptItem item={item} />
+              </div>              
+            )})
+          }
           <div className='total'>
             <span>TOTAL</span>
             <span className='spend-total'>${formatNumber(receiptTotal)}</span>
           </div>
         </div>
       </div>
-
     </>
   )
 }

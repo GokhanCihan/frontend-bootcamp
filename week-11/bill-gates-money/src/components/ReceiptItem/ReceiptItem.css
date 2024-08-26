@@ -1,0 +1,19 @@
+.receipt .item {
+  display: grid;
+  grid-template-columns: 8rem 2rem 3rem;
+  gap: 3rem;
+}
+
+.receipt .item .name {
+  display: block;
+  min-width: max-content;
+  justify-self: start;
+}
+
+.receipt .item .count {
+  justify-self: start;
+}
+
+.receipt .item .spend {
+  justify-self: end;
+}
