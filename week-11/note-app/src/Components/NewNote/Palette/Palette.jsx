@@ -12,8 +12,8 @@ function Palette({ setColor }) {
         colors.map(item => {
           return (
             <div key={item.id} className={"pick "+item.color}>
-              <div className="ring"></div>
               <input type="radio" name="color" id={item.color} onClick={() => handleSelection(item.color)}/>
+              <div className="ring"></div>
             </div>
           )
         })

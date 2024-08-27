@@ -21,8 +21,14 @@
   opacity: 0;
 }
 
+.palette .pick .ring {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  top: 0%;
+}
 
-
-.palette .pick input:checked ~ .ring {
-  border: 2px solid gray;
+.palette .pick input:checked ~ div.ring {
+  border: 2px solid white;
 }
