@@ -1,0 +1,28 @@
+.palette {
+  display: flex;
+  gap: 1rem;
+}
+
+.palette .pick {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+}
+
+
+.palette .pick input {
+  z-index: 2;
+  position: absolute;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  opacity: 0;
+}
+
+
+
+.palette .pick input:checked ~ .ring {
+  border: 2px solid gray;
+}
