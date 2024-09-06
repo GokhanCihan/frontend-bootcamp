@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import Context from "../../Context";
 import xmark from "../../assets/x-mark.png";
 
-function Todo({shownTodo, removeTodo, toggleStatus}) {
+
+function Todo({shownTodo}) {
+  const {removeTodo, toggleStatus } = useContext(Context);
 
   return (
     <div className={`todo-item ${shownTodo.status}`}>

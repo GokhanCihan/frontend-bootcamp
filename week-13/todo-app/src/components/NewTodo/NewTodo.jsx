@@ -1,4 +1,9 @@
-function NewTodo({setTodos, lastId, setLastId}) {
+import React from "react";
+import { useContext } from "react";
+import Context from "../../Context";
+
+function NewTodo() {
+  const { setTodos, lastId, setLastId } = useContext(Context);
 
   const handleNewTodo = (e) => {
     if(e.key === "Enter") {
@@ -6,7 +11,7 @@ function NewTodo({setTodos, lastId, setLastId}) {
       const newId = (Number(lastId) + 1).toString();
       const newTodo = { id: newId, todo: e.target.value, status: "" }
       setTodos(prev => [...prev, newTodo]);
-      setLastId(prev => newId);
+      setLastId(newId);
       e.target.value = "";
     }
   }

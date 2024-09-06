@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import Context from "../../Context";
 
-function Footer({showFilter, setShowFilter, removeCompleted}) {
+function Footer() {
+  const { setShowFilter, showFilter, removeCompleted } = useContext(Context);
+
   return (
     <footer className="footer">
       <div className="filters">
