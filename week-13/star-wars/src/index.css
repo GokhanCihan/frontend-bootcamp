@@ -23,3 +23,13 @@ html, body {
   width: 80%;
   margin: 0 auto;
 }
+
+.detail-img {
+  object-fit: scale-down;
+  width: 700px;
+}
+
+.detail-info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

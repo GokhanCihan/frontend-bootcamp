@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { Divider } from '@mui/material';
 import { useContext } from 'react';
 import StarshipContext from '../../Context/StarshipContext';
+import xwing from '../../assets/x-wing.jpeg'
 
 export default function StarshipActionCard({starship}) {
   const { setDetailUrl } = useContext(StarshipContext);
@@ -27,7 +28,8 @@ export default function StarshipActionCard({starship}) {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="200"
+          image={xwing}
           alt="starship"
         />
         <Divider />

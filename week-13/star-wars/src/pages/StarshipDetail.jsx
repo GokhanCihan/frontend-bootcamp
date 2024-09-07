@@ -3,6 +3,7 @@ import axios from "axios";
 import Main from '../layouts/Main';
 import StarshipContext from '../Context/StarshipContext';
 import { Typography, Divider } from '@mui/material';
+import xwing from '../assets/x-wing.jpeg';
 
 const instance = axios.create({
   baseURL: "https://swapi.dev/api",
@@ -28,15 +29,16 @@ function StarshipDetail() {
   return (
     <Main>
       <h1>{detailInfo.name}</h1>
+      <img src={xwing} className='detail-img'/>
       {
         Object.entries(info).map(([key, value], index) => {
           return (
             <div key={index} className='detail-container'>
-              <div className='info-container'>
-                <Typography variant="string" align="left" sx={{ color: 'text.primary' }}>
+              <div className='detail-info-container'>
+                <Typography variant="body1" align="left" sx={{ color: 'text.primary' }}>
                   {key}
                 </Typography>
-                <Typography variant="string" align="left" sx={{ color: 'text.secondary' }}>
+                <Typography variant="body1" align="left" sx={{ color: 'text.secondary' }}>
                   {value}
                 </Typography>
               </div>
