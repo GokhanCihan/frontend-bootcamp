@@ -4,10 +4,17 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
+import { useNavigate } from 'react-router-dom';
 
-export default function StarshipActionCard({ name, model, shipClass, hpRating, manufacturer, imgUrl, detailUrl}) {
+export default function StarshipActionCard({starship, imgUrl}) {
+  const navigate = useNavigate();
+
   return (
-    <Card variant="elevation" sx={{ width: 350 }}>
+    <Card 
+      variant="elevation" 
+      sx={{ width: 350 }}
+      onClick={() => navigate(`/starships/${detailUrl.slice(-2)}`)}
+    >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -17,14 +24,14 @@ export default function StarshipActionCard({ name, model, shipClass, hpRating, m
         />
         <CardContent>
           <Typography gutterBottom variant="subtitle1" component="div">
-            {name}
+            {starship.name}
           </Typography>
           <div className='info-container'>
             <Typography variant="string" align="left" sx={{ color: 'text.primary' }}>
               Class:
             </Typography>
             <Typography variant="string" align="left" sx={{ color: 'text.secondary' }}>
-              {shipClass}
+              {starship.starship_class}
             </Typography>
           </div>
           <div className='info-container'>
@@ -32,7 +39,7 @@ export default function StarshipActionCard({ name, model, shipClass, hpRating, m
               Model:
             </Typography>
             <Typography variant="string" align="left" sx={{ color: 'text.secondary' }}>
-              {model}
+              {starship.model}
             </Typography>
           </div>
           <div className='info-container'>
@@ -40,7 +47,7 @@ export default function StarshipActionCard({ name, model, shipClass, hpRating, m
               Hyperdrive:
             </Typography>
             <Typography variant="string" align="left" sx={{ color: 'text.secondary' }}>
-              {hpRating}
+              {starship.hyperdrive_rating}
             </Typography>
           </div>
           <div className='info-container'>
@@ -48,7 +55,7 @@ export default function StarshipActionCard({ name, model, shipClass, hpRating, m
               Manufacturer:
             </Typography>
             <Typography variant="string" align="left" sx={{ color: 'text.secondary' }}>
-              {manufacturer}
+              {starship.manufacturer}
             </Typography>
           </div>
         </CardContent>
