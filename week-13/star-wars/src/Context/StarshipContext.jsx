@@ -7,8 +7,8 @@ export function StarshipContextProvider({children}) {
   const [nextUrl, setNextUrl] = useState("");
   const [starships, setStarships] = useState([]);
   const [disabled, setDisabled] = useState(false);
-  const [detailUrl, setDetailUrl] = useState(null);
-  const [detailInfo, setDetailInfo] = useState(null);
+  const [detailUrl, setDetailUrl] = useState("");
+  const [detailInfo, setDetailInfo] = useState("");
 
   const instance = axios.create({
     baseURL: "https://swapi.dev/api",

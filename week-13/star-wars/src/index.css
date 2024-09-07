@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   width: 100vw;
   height: 100vh;
+  background-color: silver;
 }
 
 .ship-container {
@@ -16,4 +17,9 @@ html, body {
 .info-container {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
+}
+
+.detail-container {
+  width: 80%;
+  margin: 0 auto;
 }

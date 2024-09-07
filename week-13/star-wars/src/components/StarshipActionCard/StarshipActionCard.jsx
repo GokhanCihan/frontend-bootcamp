@@ -5,23 +5,32 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import { useNavigate } from 'react-router-dom';
+import { Divider } from '@mui/material';
+import { useContext } from 'react';
+import StarshipContext from '../../Context/StarshipContext';
 
-export default function StarshipActionCard({starship, imgUrl}) {
+export default function StarshipActionCard({starship}) {
+  const { setDetailUrl } = useContext(StarshipContext);
   const navigate = useNavigate();
+
+  const handleClick = () => {
+    setDetailUrl(starship.url);
+    navigate(`/starships/${starship.url.slice(-2)}`);
+  }
 
   return (
     <Card 
       variant="elevation" 
       sx={{ width: 350 }}
-      onClick={() => navigate(`/starships/${detailUrl.slice(-2)}`)}
+      onClick={handleClick}
     >
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image={imgUrl}
           alt="starship"
         />
+        <Divider />
         <CardContent>
           <Typography gutterBottom variant="subtitle1" component="div">
             {starship.name}
@@ -34,6 +43,7 @@ export default function StarshipActionCard({starship, imgUrl}) {
               {starship.starship_class}
             </Typography>
           </div>
+          <Divider />
           <div className='info-container'>
             <Typography variant="string" align="left" sx={{ color: 'text.primary' }}>
               Model:
@@ -42,6 +52,7 @@ export default function StarshipActionCard({starship, imgUrl}) {
               {starship.model}
             </Typography>
           </div>
+          <Divider />
           <div className='info-container'>
             <Typography variant="string" align="left" sx={{ color: 'text.primary' }}>
               Hyperdrive:
@@ -50,6 +61,7 @@ export default function StarshipActionCard({starship, imgUrl}) {
               {starship.hyperdrive_rating}
             </Typography>
           </div>
+          <Divider />
           <div className='info-container'>
             <Typography variant="string" align="left" sx={{ color: 'text.primary' }}>
               Manufacturer:

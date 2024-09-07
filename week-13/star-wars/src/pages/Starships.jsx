@@ -17,7 +17,6 @@ function Starships() {
             return (
               <StarshipActionCard
                 key={index}
-                imgUrl={"imageUrl"}
                 starship={starship}
               />
             )
