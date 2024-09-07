@@ -5,10 +5,6 @@ import StarshipContext from '../Context/StarshipContext';
 import { Typography, Divider } from '@mui/material';
 import xwing from '../assets/x-wing.jpeg';
 
-const instance = axios.create({
-  baseURL: "https://swapi.dev/api",
-});
-
 function StarshipDetail() {
   const { detailInfo } = useContext(StarshipContext);
 

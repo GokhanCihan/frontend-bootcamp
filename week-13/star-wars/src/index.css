@@ -12,6 +12,7 @@ html, body {
   justify-content: center;
   gap: 3rem;
   margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 .info-container {

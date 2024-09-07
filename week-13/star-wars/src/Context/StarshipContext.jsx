@@ -9,6 +9,7 @@ export function StarshipContextProvider({children}) {
   const [disabled, setDisabled] = useState(false);
   const [detailUrl, setDetailUrl] = useState("");
   const [detailInfo, setDetailInfo] = useState("");
+  const [searchInput, setSearchInput] = useState(null);
 
   const instance = axios.create({
     baseURL: "https://swapi.dev/api",
@@ -44,6 +45,16 @@ export function StarshipContextProvider({children}) {
     .catch((err) => console.log(err));
   };
 
+  const getSearchResult = () => {
+    instance.get(`starships/?search=${searchInput}`)
+    .then((res) => {
+      if(res.data.results !== ""){
+        setStarships(res.data.results);
+      }
+    })
+    .catch((err) => console.log(err));
+  }
+
   useEffect(() => {
     getStarships();
   }, [])
@@ -54,20 +65,23 @@ export function StarshipContextProvider({children}) {
     }
   }, [detailUrl])
 
+  useEffect(() => {
+    if (searchInput) {
+      getSearchResult();
+    }
+  }, [searchInput])
   return (
     <StarshipContext.Provider value={
       {
         starships,
-        setStarships,
-        nextUrl,
-        setNextUrl,
         disabled,
         setDisabled,
         detailUrl,
         setDetailUrl,
         detailInfo,
         setDetailInfo,
-        getMoreStarships
+        getMoreStarships,
+        setSearchInput
       }
     }>
       {children}
