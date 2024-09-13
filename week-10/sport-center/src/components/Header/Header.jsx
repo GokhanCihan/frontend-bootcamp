@@ -1,10 +1,29 @@
-import './Header.style.css'
-import logo from '../../assets/images/logo.png'
+import './Header.style.css';
+import logo from '../../assets/images/logo.png';
+import { useEffect, useRef } from 'react';
+
 
 function Header() {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const onScroll = (e) => {
+      if(document.documentElement.scrollTop>0) {
+        ref.current.style.backgroundColor = "var(--color-1)";
+      }else {
+        ref.current.style.backgroundColor = "transparent";
+      }
+    }
+
+    window.addEventListener('scroll', onScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    }
+  }, []);
   
   return (
-    <section id="header">
+    <section ref={ref} id="header">
         <div className="logo">
           <img src={logo} alt="sport center logo" />
         </div>
