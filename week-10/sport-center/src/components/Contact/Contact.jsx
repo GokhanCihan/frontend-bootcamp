@@ -1,16 +1,14 @@
 import './Contact.style.css';
+import Heading from '../Heading/Heading';
 
 function Contact() {
+  const heading = "contact us";
+  const paragraph = `Lorem ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney`
   
   return (
     <section id="contact">
       <div className="content-area">
-        <div className="section-heading">
-          <h2>CONTACT US</h2>
-          <div></div>
-          <p>Lorem ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney 
-            College.</p>
-        </div>
+        <Heading heading={heading} paragraph={paragraph} />
         <div className="main-container">
           <div className="container">
             <div className="info-container">

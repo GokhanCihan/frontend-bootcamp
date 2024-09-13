@@ -1,17 +1,15 @@
-import './Classes.style.css'
-import yoga from '../../assets/images/yoga.jpg'
+import './Classes.style.css';
+import Heading from '../Heading/Heading';
+import yoga from '../../assets/images/yoga.jpg';
 
 function Classes() {
-  
+  const heading = "our classes";
+  const paragraph = `Lorem ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney 
+  College`
   return (
     <section id="classes">
       <div className="content-area">
-        <div className="section-heading">
-          <h2>OUR CLASSES</h2>
-          <div></div>
-          <p>Lorem ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney 
-            College</p>
-        </div>
+        <Heading heading={heading} paragraph={paragraph} />
         <div id="lessons">
           <button id="yoga" className="clicked inv-triangle">
             Yoga

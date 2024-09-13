@@ -1,18 +1,16 @@
 import './Review.style.css';
 import client1 from '../../assets/images/client1.jpg';
 import client2 from '../../assets/images/client2.jpg';
+import Heading from '../Heading/Heading';
 
 function Review() {
-  
+  const heading = "client review";
+  const paragraph = `Lorem ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney`
+
   return (
     <section id="review">
       <div className="content-area">
-        <div className="section-heading">
-          <h2>REVIEW CLIENT</h2>
-          <div></div>
-          <p>Lorem ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney 
-            College.</p>
-        </div>
+      <Heading heading={heading} paragraph={paragraph} />
         <div className="review-cards">
           <div className="review-card">
             <div className="profile">

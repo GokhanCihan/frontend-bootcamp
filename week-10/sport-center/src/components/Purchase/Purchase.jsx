@@ -3,18 +3,17 @@ import purchase1 from '../../assets/images/purchase1.jpg';
 import purchase2 from '../../assets/images/purchase2.jpg';
 import purchase3 from '../../assets/images/purchase3.jpg';
 import purchase4 from '../../assets/images/purchase4.jpg';
+import Heading from '../Heading/Heading';
 
 function Purchase() {
+  const heading = "purchase from us";
+  const paragraph = `Lorem ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney 
+  College`
   
   return (
     <section id="purchase">
       <div className="content-area">
-        <div className="section-heading">
-          <h2>PURCHASE FROM US</h2>
-          <div></div>
-          <p>Lorem ipsum is not simply random text. It has roots in a piece of classical at Hampden-Sydney 
-            College.</p>
-        </div>
+        <Heading heading={heading} paragraph={paragraph} />
         <div id="shopping">
           <div className="product-card">
             <img src={purchase1} alt="man holding kettlebell" />
