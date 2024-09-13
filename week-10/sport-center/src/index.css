@@ -1,0 +1,227 @@
+@media (max-width: 576px) {
+  .content-area {
+      width: 90vw;;
+  }
+
+  .section-heading p {
+      width: 80%;
+      font-size: 1.6rem;
+      text-align: center;
+  }
+
+  /* header */
+
+  #header {
+      padding: 0;
+      justify-content: center;
+      gap: 15rem;
+  }
+
+  .menu-btn ul {
+      position: fixed;
+      transform: translate(100%, 0);
+      flex-direction: column;
+      align-items: start;
+      margin: 0;
+      padding: 1rem 1rem;
+      right: 0%;
+      top: 8%;
+      background-color: var(--color-1);
+  }
+
+  .menu-btn {
+      position: relative;
+      display: block;
+  }
+
+  .menu-btn input {
+      z-index: 2;
+      position: absolute;
+      display: block;
+      width: 60px;
+      height: 60px;
+      opacity: 0;
+      cursor: pointer;
+  }
+
+  .menu-btn div {
+      z-index: 1;
+      display: block;
+      width: 33px;
+      height: 5px;
+      margin-bottom: 5px;
+      position: relative;
+      background: white;
+      border-radius: 3px;
+      transform-origin: 4px 0px;
+  }
+
+  /* create cross shape*/
+  .menu-btn div:nth-last-child(2) {
+      transform-origin: 0% 100%;
+  }
+
+  .menu-btn input:checked ~ div {
+      opacity: 1;
+      transform: rotate(-45deg) translate(-15px, 15px);
+      background: white;
+  }
+
+  .menu-btn input:checked ~ div:nth-last-child(3) {
+      opacity: 0;
+  }
+
+  .menu-btn input:checked ~ div:nth-last-child(2) {
+      transform: rotate(45deg) translate(-13px, -16px);
+  }
+
+  /* hide/unhide menu */
+  .menu-btn input:checked ~ ul {
+      transform: none;
+      align-items: center;
+  }
+
+  /* hero */
+  #hero .content-area {
+      padding-top: 10rem;
+  }
+
+  #power-btn {
+      padding: 0.3rem 2rem;
+      margin-bottom: 1rem;
+      font-size: 2em;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      text-shadow: 0.3rem 0rem 1rem black;;
+      letter-spacing: 1.1px;
+  }
+
+  #hero .content-area span {
+      display: inline;
+  }
+
+  #hero .btn-container {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1rem;
+  }
+
+  #hero .btn-container>* {
+      margin-left: 0;
+      margin-right: 0;
+  }
+
+  /* stats */
+  #stats {
+      padding: 3rem 0;
+  }
+
+  #stats .content-area {
+      width: 75vw;
+  }
+
+  #stats .card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+  }
+
+  .stat-card {
+      display: flex;
+      width: 70%;
+      justify-content: space-around;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 2rem 3rem;
+  }
+  
+  /* classes */
+  #classes .content-area {
+      padding-bottom: 5rem;
+  }
+
+  #lessons {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem 5rem;
+  }
+
+  #lesson-content {
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+  }
+
+  #lesson-content article p {
+      padding-bottom: 1.5rem;
+  }
+
+  #lesson-content img {
+      width: 100%;
+  }
+
+  /* BMI */
+
+  #bmi .content-area {
+      flex-direction: column;
+  }
+
+  #bmi article h2 {
+      text-align: center;
+  }
+
+  #bmi article p {
+      font-size: 1.6rem;
+  }
+
+  #inputs {
+      flex-direction: column;
+  }
+
+  input {
+      width: 40%;
+  }
+
+  /* trainers */
+  #trainer-photos {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+  }
+
+  /* purchase */
+  #shopping {
+      flex-direction: column;
+      width: 70%;
+      margin: 0 auto;
+  }
+
+  /* review */
+  .review-cards {
+      flex-direction: column;
+      font-size: 1.3rem;
+  }
+
+  /* contact */
+  #contact .main-container {
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+
+  #contact .container {
+      width: 95%;
+      margin: 0 auto;
+  }
+  
+  #contact form>* {
+      width: 100%;
+      padding: 0.4rem 0rem;
+      padding-left: 0.5rem;
+  }
+
+  iframe {
+      width: 500px; 
+      height: 500px;
+      flex-grow: 1;
+  }
+}

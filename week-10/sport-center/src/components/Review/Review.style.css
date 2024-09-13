@@ -1,0 +1,61 @@
+#review {
+  background-color: var(--background-color-1);
+  padding-bottom: 5rem;
+}
+
+.review-cards {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  gap: 6rem;
+}
+
+.review-card {
+  position: relative;
+}
+
+.profile {
+  display: flex;
+  max-width: max-content;
+  margin-bottom: 0.75rem;
+}
+
+.profile img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+  border-radius: 100%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.profession {
+  padding-bottom: 0.2rem; 
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.comment {
+  padding: 0.5rem 1.1rem;
+  color: white;
+  background-color: var(--color-1);
+}
+
+.triangle-left {
+  position: absolute;
+  border-right: 0 solid transparent;
+  border-left: 1.5rem solid transparent;
+  border-top: 1.5rem solid rgb(53 85 146 / 50%);
+}
+
+.triangle-right {
+  position: absolute;
+  right: 0%;
+  border-left: 0 solid transparent;
+  border-right: 1.5rem solid transparent;
+  border-top: 1.5rem solid rgb(53 85 146 / 50%);
+}

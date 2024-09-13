@@ -1,0 +1,45 @@
+.menu-btn>div, .menu-btn>input {
+  display: none;
+}
+
+#header {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  width: 100%;
+  padding-left: 16.5%;
+}
+
+#header ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  flex-grow: 1;
+}
+
+#header ul li {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+#header ul li:not(:last-child):hover { 
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
+  border-radius: 0.4rem;
+  color: white;
+  background-color: var(--color-2);
+}
+
+#header ul li a { 
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#join-us-btn {
+  min-width: max-content;
+  background-color: var(--color-2);
+}
